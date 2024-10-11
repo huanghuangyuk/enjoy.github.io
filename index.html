@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday!</title>
+
+
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <bokeh></bokeh>
+    <div class="mobile">最大化查看</div>
+    <div class="pyro">
+        <div class="before"></div>
+        <div class="after"></div>
+    </div>
+    <h1>陈玲妹!</h1>
+    <h2>Happy Birthday !</h2>
+    <span>🎉</span>
+    <div class="candle">
+        <div id="flame" class="lit"></div>
+    </div>
+
+    <div class="cake"></div>
+    <div class="plate"></div>
+
+
+
+</body>
+<script>
+    let index = 1;
+    // 写一个定时器，随机选取几个bokeh元素，替换它的背景图片，并修改width和height大小，再下一次定时器执行时，复原上一次元素的背景图片和宽高
+    setInterval(function () {
+        if (index > 8) {
+            index = 1
+        }
+
+        var bokehElements = document.querySelectorAll('bokeh');
+        var randomBokeh = bokehElements[Math.floor(Math.random() * bokehElements.length)];
+        var originalBackground = randomBokeh.style.backgroundImage;
+        var originalWidth = randomBokeh.style.width;
+        var originalHeight = randomBokeh.style.height;
+        randomBokeh.style.backgroundImage = 'url(./img/' + index + '.jpg)';
+        randomBokeh.style.backgroundSize = 'contain';
+        randomBokeh.style.width = '15vmin';
+        randomBokeh.style.height = '15vmin';
+        index++;
+        setTimeout(function () {
+            randomBokeh.style.backgroundImage = originalBackground;
+            randomBokeh.style.width = originalWidth;
+            randomBokeh.style.height = originalHeight;
+        }, 2000);
+    }, 1500);
+
+
+</script>
+
+</html>
